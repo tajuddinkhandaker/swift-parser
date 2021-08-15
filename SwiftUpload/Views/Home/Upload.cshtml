@@ -1,0 +1,22 @@
+﻿@{
+    ViewBag.Title = "Upload";
+}
+
+@model IEnumerable<SwiftUpload.Models.SwiftTransactionUploadModel>
+
+<h2>Uploaded Data</h2>
+
+<p>@ViewBag.Message</p>
+<p>@ViewBag.Doc</p>
+
+<table class="table">
+    @foreach (var item in Model)
+    {
+      <tr>
+        <td>@item.AccNumber</td>
+        <td>@item.BenefName</td>
+        <td>@item.Amount</td>
+      </tr>
+    }
+</table>
+

@@ -1,0 +1,112 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<h2>@ViewBag.Message</h2>
+<p id="resultContainer">
+    To learn more about ASP.NET MVC visit <a href="http://asp.net/mvc" title="ASP.NET MVC Website">http://asp.net/mvc</a>.
+</p>
+<p id="info">
+    nothing to show yet
+</p>
+
+@*, enctype = "multipart/form-data"*@
+
+@*@using (Html.BeginForm("Upload", "Home", FormMethod.Post, new { id = "uploadForm", enctype = "multipart/form-data" }))
+{
+    <div id="swift_uploader_form_body">
+        @Html.AntiForgeryToken()
+        <input id="swift_input_file" name="swift_file" type="file" />
+        <input id="swift_uploader_button" type="submit" value="Upload" />
+    </div>
+}*@
+
+@*<input type="file" id="files" name="files" />
+<input type="button" id="Upload" value="Upload" class="btn btn-primary" />*@
+
+@using (Ajax.BeginForm("Upload", "Home", new AjaxOptions() { HttpMethod = "POST" , UpdateTargetId = "info", OnSuccess = "onUploadSucess", OnFailure = "onUploadFailure",  }, new { enctype = "multipart/form-data"}))
+{
+    @Html.AntiForgeryToken()
+    <input type="file" name="files" />
+    <input type="submit" value="Upload" />
+}
+
+<script type="text/javascript">
+    $(function () {
+    
+        function onUploadSucess(response) {
+            console.log(response);
+            $('#resultContainer').html(response.result ? "done!" : "failed");
+            $('#info').html(response.message);
+        },
+        function onUploadFailure(response) {
+            $('#resultContainer').html("error");
+            console.log(response);
+        }
+
+        $('#uploadForm').submit(function () {
+            //e.preventDefault();
+            var formData = new FormData(this);
+            $.ajax({
+                url: this.action,
+                type: this.method,
+//                dataType: "json",
+//                contentType: "application/json; charset=utf-8",
+                //contentType: false,
+                processData: false,
+                data: formData,
+//                cache: false,
+                success: function (response) {
+                    console.log(response);
+                    $('#resultContainer').html(response.result ? "done!" : "failed");
+                    $('#info').html(response.message);
+                },
+                error: function (response) {
+                    $('#resultContainer').html("error");
+                    console.log(response);
+                }
+            });
+            return false;
+        });
+    });
+
+    $(document).ready(function () {
+        $('#Upload').click(function () {
+
+            var fileUpload = $("#files").get(0);
+            var files = fileUpload.files;
+
+            // Create  a FormData object
+            var fileData = new FormData();
+
+            // if there are multiple files , loop through each files
+            for (var i = 0; i < files.length; i++) {
+                fileData.append(files[i].name, files[i]);
+            }
+
+            // Adding more keys/values here if need
+            //            fileData.append('Test', "Test Object values");
+
+            console.log("file count: " + files.length);
+
+
+            $.ajax({
+                url: '/Home/Upload', //URL to upload files 
+                type: 'POST', //as we will be posting files and other method POST is used
+                processData: false, //remember to set processData and ContentType to false, otherwise you may get an error
+                contentType: false,
+                data: fileData,
+                success: function (response) {
+                    console.log(response);
+                    $('#resultContainer').html(response.result ? "done!" : "failed");
+                    $('#info').html(response.message);
+                },
+                error: function (response) {
+                    $('#resultContainer').html("error");
+                    console.log(response);
+                }
+            });
+
+        });
+    });  
+</script>

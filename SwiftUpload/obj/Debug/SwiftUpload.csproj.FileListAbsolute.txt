@@ -1,0 +1,5 @@
+D:\net_projects\SwiftUpload\SwiftUpload\bin\SwiftUpload.dll
+D:\net_projects\SwiftUpload\SwiftUpload\bin\SwiftUpload.pdb
+D:\net_projects\SwiftUpload\SwiftUpload\obj\Debug\SwiftUpload.csprojResolveAssemblyReference.cache
+D:\net_projects\SwiftUpload\SwiftUpload\obj\Debug\SwiftUpload.dll
+D:\net_projects\SwiftUpload\SwiftUpload\obj\Debug\SwiftUpload.pdb

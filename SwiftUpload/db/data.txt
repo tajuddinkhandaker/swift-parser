@@ -1,0 +1,139 @@
+                                                                                
+ Report Header                                                                  
+                                                                                
+                                                                                
+   Application:      Alliance Message Management                                
+   Report type:      Message File - Message Details Report                      
+   Operator:         ZINIA                                                      
+   Alliance Server   bkbabddh                                                   
+   Instance:                                                                    
+   Date - Time:      2019/07/28 15:36:23                                        
+                                                                                
+                                                                                
+ Messages                                                                       
+                                                                                
+                                                                                
+                                   Message 1                                    
+ ***                                                                            
+ Message Identifier                                                             
+                                                                                
+ Message         SWIFT Interface                                                
+ Preparation                                                                    
+ Application:                                                                   
+ Unique Message  O TCARAEADXXX 103 0160702607190069 (suffix 19072855867)        
+ Identifier:                                                                    
+ Message Header                                                                 
+                                                                                
+ Status:         Read-Only                                                      
+ Format:     Swift       Sub-ForOutput                                          
+                         mat:                                                   
+ Identifier: fin.103     ExpansiSingle Customer Credit Transfer                 
+                         on:                                                    
+ Application FIN         Nature:Financial                                       
+ Sender:     TCARAEADXXX LT:    A                                               
+ Receiver:   BKBABDDHXXX LT:    A                                               
+ Transaction     0160702607190069                                               
+ Reference:                                                                     
+ Priority:       Normal                                                         
+ Monitoring:     None                                                           
+ UETR:           86116d6d-8588-45ae-a3ab-ebab6468036a                           
+ Amoun25000, CurreBDT    Value  28/07/19                                        
+ t:          ncy:        Date:                                                  
+                                                                                
+ Message Text                                                                   
+                                                                                
+ Block 4                                                                        
+ F20: Sender's Reference                                                        
+           0160702607190069                                                     
+ F23B: Bank Operation Code                                                      
+           CRED                                                                 
+ F32A: Value Date/Currency/Interbank Settled Amount                             
+           Date:          190728          2019 Jul 28                           
+           Currency:          BDT          TAKA                                 
+           Amount:          25000,          #25000,#                            
+ F50F: Ordering Customer - Party Identifier - Number/Name and Address           
+           Party Identifier:                                                    
+                     Account                                                    
+           Account:          /AE292900000000020004499                           
+ NameAndAddress: Number/Name and Address                                        
+           Number:          1/                                                  
+           Details:          JASIM UDDIN AKRAM ALI                              
+           Number:          2/                                                  
+           Details:          MAMOURAH AREA RAS AL KHAIMAH                       
+           Number:          3/                                                  
+           Details:          AE/RAS AL KHAIMAH                                  
+           Number:          7/                                                  
+           Details:          AE/784-1978-6980485-2                              
+ F53B: Sender's Correspondent - Party Identifier - Location                     
+           Party Identifier:          /220 2 0027                               
+ F57D: Account With Institution - Party Identifier - Name and Address           
+           Name and Address:                                                    
+                     AGRANI BANK LTD                                            
+                     MANIKNAGAR                                                 
+                     MANIKGONJ DIST                                             
+                     BANGLADESH                                                 
+ F59: Beneficiary Customer - Account - Name and Address                         
+           Account:                                                             
+                     /0200006213588                                             
+           Name and Address:          MORJINA W/O JASIM UDDIN                   
+ F71A: Details of Charges                                                       
+           SHA                                                                  
+ F77B: Regulatory Reporting                                                     
+           /ORDERRES/AE//FAM                                                    
+ Block 5                                                                        
+ {CHK:2A5BA42DCE3E}{DLM:}                                                       
+ Message History                                                                
+                                                                                
+ Message history details:                                                       
+ *Original (Live in "IDR")                                                      
+                                                                                
+ By SYSTEM : Created at rp [_SI_from_SWIFT] and assigned to unit [None],        
+ priority [7]                                                                   
+  Received from SWIFT "BKBABDDHAXXXF" on 2019/07/28 at 10:20:26                 
+  Session Nr 7054 Sequence Nr 115067                                            
+   MAC-Equivalent PKI Signed with resultSuccess                                 
+   RMA Check with result Success                                                
+ By SYSTEM : Routed from rp [_SI_from_SWIFT] to rp [Received]; On Processing by 
+ Function _SI_from_SWIFT with result Success;(Rule:USER,200)                    
+  By BKBSWIFT : Manually disposed from rp [Received] to rp [IDR]                
+ Instances                                                                      
+                                                                                
+ Message UUMID:  O TCARAEADXXX 103 0160702607190069 (suffix 19072855867)        
+ Instance No:    0                                                              
+ Instance Type:  Original                                                       
+ Assigned Unit:  None                                                           
+ Status:         Instance in rp (IDR) previously processed by (_SI_from_SWIFT)  
+                 with a return status=Success                                   
+ Instance        7                                                              
+ Priority:                                                                      
+ In Queue Since: 2019/07/28 10:22:19                                            
+ Addressee Information:                                                         
+   Institution: BKBABDDHXXX  BANGLADESH KRISHI BANK                             
+                             1000 DHAKA                                         
+                             DHAKA                                              
+                             BD                                                 
+                             BANGLADESH                                         
+   Network:                                                                     
+ Creation:                                                                      
+   Appl/Serv:     SWIFT Interface                                               
+   RP & Ft:       _SI_from_SWIFT                                                
+   Date:          2019/07/28                                                    
+   Time:          10:20:26                                                      
+ Other                                                                          
+                                                                                
+ Delivery overdueNo                                                             
+ warning request                                                                
+ Network deliveryNo                                                             
+ notif. request                                                                 
+                                                                                
+ ============================================================================== 
+                                                                                
+                                                                                
+                                                                                                                                                                
+ Report Footer                                                                  
+                                                                                
+                                                                                
+   Number of         1                                                          
+   Entities:                                                                    
+   End of report                                                                
+                                                                                
